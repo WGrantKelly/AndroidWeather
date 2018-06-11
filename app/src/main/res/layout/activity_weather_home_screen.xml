@@ -7,6 +7,15 @@
     tools:context=".WeatherHomeScreen"
     tools:layout_editor_absoluteY="25dp">
 
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -111,6 +120,20 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             app:srcCompat="@mipmap/umbrellafore" />
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="High" />
+
+                        <TextView
+                            android:id="@+id/textView20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Low" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -134,6 +157,21 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             app:srcCompat="@mipmap/umbrellafore" />
+
+                        <TextView
+                            android:id="@+id/textView21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="High" />
+
+                        <TextView
+                            android:id="@+id/textView22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Low" />
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -157,6 +195,21 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             app:srcCompat="@mipmap/umbrellafore" />
+
+                        <TextView
+                            android:id="@+id/textView23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="High" />
+
+                        <TextView
+                            android:id="@+id/textView24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Low" />
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -180,6 +233,21 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             app:srcCompat="@mipmap/umbrellafore" />
+
+                        <TextView
+                            android:id="@+id/textView25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="High" />
+
+                        <TextView
+                            android:id="@+id/textView26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Low" />
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -203,6 +271,21 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             app:srcCompat="@mipmap/umbrellafore" />
+
+                        <TextView
+                            android:id="@+id/textView28"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Low" />
+
+                        <TextView
+                            android:id="@+id/textView27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="High" />
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -225,6 +308,21 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             app:srcCompat="@mipmap/umbrellafore" />
+
+                        <TextView
+                            android:id="@+id/textView29"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="High" />
+
+                        <TextView
+                            android:id="@+id/textView30"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Low" />
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -247,6 +345,21 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             app:srcCompat="@mipmap/umbrellafore" />
+
+                        <TextView
+                            android:id="@+id/textView31"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="High" />
+
+                        <TextView
+                            android:id="@+id/textView32"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Low" />
+
                     </LinearLayout>
 
                 </LinearLayout>

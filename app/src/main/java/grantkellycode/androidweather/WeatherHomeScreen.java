@@ -1,8 +1,11 @@
 package grantkellycode.androidweather;
 
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.VideoView;
+
 
 public class WeatherHomeScreen extends AppCompatActivity {
 
@@ -10,6 +13,10 @@ public class WeatherHomeScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_home_screen);
+
+        VideoView simpleVideoView = (VideoView) findViewById(R.id.videoView);
+        simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.dandelion));
+        simpleVideoView.start();
     }
 
     @Override
