@@ -10,9 +10,10 @@ import java.net.URL;
 public class RetrieveXML extends AsyncTask<Void, Void, String>{
 
     private Exception exception;
-    private static final String API_URL = "api.openweathermap.org/data/2.5/weather?q=";
+    private static final String API_URL = "https://api.openweathermap.org/data/2.5/weather?q=";
     private static final String API_KEY = "6927d88cf63a83785732f1bc32728ef0";
     private static String cityName = "";
+    private static String MODE = "&mode=xml";
 
     public RetrieveXML(String city){
         cityName = city;
@@ -26,7 +27,7 @@ public class RetrieveXML extends AsyncTask<Void, Void, String>{
         // Do some validation here
 
         try {
-            URL url = new URL(API_URL + cityName + "&APPID="+API_KEY);
+            URL url = new URL(API_URL + cityName + MODE + "&APPID="+API_KEY);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             try {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
