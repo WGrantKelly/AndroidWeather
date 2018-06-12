@@ -35,11 +35,11 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundColor" value="8d9693" />
-                                      <entry key="backgroundLayerName" value="umbrellaBack" />
-                                      <entry key="foregroundImage" value="C:\Users\wk3642\OneDrive - Zebra Technologies\AndroidWeather\images\UmbrellaIcon.png" />
-                                      <entry key="foregroundLayerName" value="umbrellaFore" />
+                                      <entry key="backgroundLayerName" value="leavesBack" />
+                                      <entry key="foregroundImage" value="C:\Users\wk3642\OneDrive - Zebra Technologies\AndroidWeather\app\src\main\res\raw\leaves.jpg" />
+                                      <entry key="foregroundLayerName" value="leavesFore" />
                                       <entry key="legacyIconShape" value="CIRCLE" />
-                                      <entry key="outputName" value="umbrellajhfhgdhd" />
+                                      <entry key="outputName" value="leaves" />
                                       <entry key="webIconShape" value="CIRCLE" />
                                     </map>
                                   </option>

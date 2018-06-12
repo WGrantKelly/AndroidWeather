@@ -3,20 +3,37 @@ package grantkellycode.androidweather;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.VideoView;
 
+import javax.xml.transform.Result;
+
 
 public class WeatherHomeScreen extends AppCompatActivity {
+
+    String xml = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_home_screen);
 
-        VideoView simpleVideoView = (VideoView) findViewById(R.id.videoView);
-        simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.dandelion));
-        simpleVideoView.start();
+        RetrieveXML retrieved = new RetrieveXML("Bentonville");
+        try{
+            xml = new RetrieveXML("Bentonville").execute().get();
+        }
+        catch(Exception e){
+            Log.e("ERROR", e.getMessage(), e);
+        }
+
+        try{
+            new ParseAndLoad(xml).execute().get();
+        }
+        catch(Exception e){
+            Log.e("ERROR", e.getMessage(), e);
+        }
+
     }
 
     @Override
