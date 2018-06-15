@@ -28,7 +28,7 @@ public class WeatherHomeScreen extends AppCompatActivity {
         }
 
         try{
-            new ParseAndLoad(xml).execute().get();
+            CurrentWeatherData cwd = new ParseAndLoad(xml).execute().get();
         }
         catch(Exception e){
             Log.e("ERROR", e.getMessage(), e);
