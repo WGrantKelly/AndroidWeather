@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.VideoView;
 
 import javax.xml.transform.Result;
@@ -13,6 +14,7 @@ import javax.xml.transform.Result;
 public class WeatherHomeScreen extends AppCompatActivity {
 
     String xml = null;
+    CurrentWeatherData cwd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +30,34 @@ public class WeatherHomeScreen extends AppCompatActivity {
         }
 
         try{
-            CurrentWeatherData cwd = new ParseAndLoad(xml).execute().get();
+            cwd = new ParseAndLoad(xml).execute().get();
+            Log.d("TESTER","WELL HELLO");
         }
         catch(Exception e){
             Log.e("ERROR", e.getMessage(), e);
         }
+
+        int temp = (int)(9.0/5.0*(Float.parseFloat(cwd.tempValue) - 273.0) + 32.0);
+        String tem = String.valueOf(temp);
+        TextView currentTemp = findViewById(R.id.textView);
+        currentTemp.setText(tem);
+
+        String loc = cwd.cityName+"\t"+cwd.cityCountry;
+        TextView location = findViewById(R.id.textView3);
+        location.setText(loc);
+
+        String hum = "Humidity " +cwd.humidityValue+" "+cwd.humidityUnit;
+        TextView humidity = findViewById(R.id.textView2);
+        humidity.setText(hum);
+
+        String pres = "Pressure " +cwd.pressureValue+" "+cwd.pressureUnit;
+        TextView pressure = findViewById(R.id.textView4);
+        pressure.setText(pres);
+
+        String wi = "Wind " +cwd.windSpeedValue+" mph "+cwd.windDirectionName;
+        TextView wind = findViewById(R.id.textView5);
+        wind.setText(wi);
+
 
     }
 
